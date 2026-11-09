@@ -1,0 +1,69 @@
+        /* Smooth scrolling untuk navigasi navbar */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; 
+        }
+        
+        /* CSS untuk container scroll horizontal (Gallery & Review) */
+        .horizontal-scroll-container {
+            display: flex;
+            overflow-x: auto;
+            flex-wrap: nowrap;
+            gap: 1.5rem;
+            padding-bottom: 1rem;
+            -webkit-overflow-scrolling: touch;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar { height: 8px; }
+        .horizontal-scroll-container::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 4px; }
+
+        /* CSS untuk container scroll vertikal pada bagian Profile */
+        .vertical-scroll-container {
+            max-height: 550px; /* Menyesuaikan tinggi agar seimbang dengan teks di kiri */
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        .vertical-scroll-container::-webkit-scrollbar { width: 6px; }
+        .vertical-scroll-container::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 3px; }
+
+        /* Pengaturan gambar Dashboard (Hero) */
+        .hero-section {
+            background-image: url('gallery/mxi6J.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        /* Overlay gelap agar H1 kontras */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.65); 
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .gallery-img {
+            min-width: 300px;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .review-card {
+            min-width: 320px;
+            max-width: 320px;
+            white-space: normal;
+        }
+
+        .avatar-placeholder {
+            width: 50px; height: 50px;
+            background-color: #e9ecef; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: #6c757d; font-size: 0.8rem;
+        }
